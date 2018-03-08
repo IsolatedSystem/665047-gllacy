@@ -1,66 +1,210 @@
 
+body {
+    background-color: #BBB09B;
+}
+
+
 .slider-slides {
   max-width: 1200px;
     outline: 2px solid red;
 }
-.slides-item {
+.slides-item-back,
+.slides-item-img {
+  min-height: 650px;
 }
 
 .main-wrapper {
   max-width: 1200px;
-    outline: 2px solid blue;
+      outline: 2px solid blue;
 }
 
-
-#switch-1:checked ~ .slider-slides .slides-item,
+#switch-1:checked ~ .slider-slides .slides-item-back,
 #switch-1:checked ~ .main-wrapper {
   background-color: #849d8f;
 }
 
-#switch-2:checked ~ .slider-slides .slides-item,
+#switch-2:checked ~ .slider-slides .slides-item-back,
 #switch-2:checked ~ .main-wrapper {
   background-color: #8996a6;
 }
 
-#switch-3:checked ~ .slider-slides .slides-item,
+#switch-3:checked ~ .slider-slides .slides-item-back,
 #switch-3:checked ~ .main-wrapper {
   background-color: #9d8b84;
 }
 
-#switch-1:checked ~ .slider-slides .slides-item .test1 {
-  height:670px;
-  background-image: url("../img/test1.png");
+#switch-1:checked ~ .slider-slides .slides-item-back .slides-item-img {
+  background-image: url("../img/background-slider-1.png");
   background-repeat: no-repeat;
-  background-position: 277px 83px;
+  background-position: 50% 0;
 }
 
-#switch-1:checked ~ .slider-slides .slides-item .test2 {
-  height:640px;
-  background-image: url("../img/test2.png");
+#switch-2:checked ~ .slider-slides .slides-item-back .slides-item-img {
+  background-image: url("../img/background-slider-2.png");
   background-repeat: no-repeat;
-  background-position: 591px 121px;
+  background-position: 50% 0;
 }
 
-#switch-1:checked ~ .slider-slides .slides-item-text .text-2,
-#switch-1:checked ~ .slider-slides .slides-item-text .text-3 {
+#switch-3:checked ~ .slider-slides .slides-item-back .slides-item-img {
+  background-image: url("../img/background-slider-3.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+#switch-1:checked ~ .slider-slides .slides-item-text .slides-item-text-2,
+#switch-1:checked ~ .slider-slides .slides-item-text .slides-item-text-3 {
   display: none;
 }
 
-#switch-2:checked ~ .slider-slides .slides-item-text .text-1,
-#switch-2:checked ~ .slider-slides .slides-item-text .text-3 {
+#switch-2:checked ~ .slider-slides .slides-item-text .slides-item-text-1,
+#switch-2:checked ~ .slider-slides .slides-item-text .slides-item-text-3 {
   display: none;
 }
 
-#switch-2:checked ~ .slider-slides .slides-item .test1 {
-  height:670px;
-  background-image: url("../img/test1-2.png");
-  background-repeat: no-repeat;
-  background-position: 277px 83px;
+#switch-3:checked ~ .slider-slides .slides-item-text .slides-item-text-1,
+#switch-3:checked ~ .slider-slides .slides-item-text .slides-item-text-2 {
+  display: none;
 }
 
-#switch-2:checked ~ .slider-slides .slides-item .test2 {
-  height:640px;
-  background-image: url("../img/test2-2.png");
+/********************  Шапка  ******************/
+
+::before {
+  content: "";
+  display: inline-block;
   background-repeat: no-repeat;
-  background-position: 591px 121px;
+}
+
+.search-btn::before {
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-search.svg");
+}
+/*
+.search-btn-hover {
+  display: none;
+}
+*/
+.login-link::before {
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/icon-entrance.svg");
+}
+
+.basket-link::before {
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/icon-basket.svg");
+}
+
+.basket-link-full::before {
+  width: 21px;
+  height: 20px;
+  background-image: url("../img/icon-basket-full.svg");
+}
+
+
+
+
+
+
+
+.promo-list {
+  color: #fff;
+}
+
+.promo-item {
+  min-height: 230px;
+  background-repeat: no-repeat;
+}
+
+.promo-raspberries {
+  background-image: url("../img/background-raspberries.jpg");
+}
+
+.promo-chocolate {
+  background-image: url("../img/background-chocolate.jpg");
+}
+
+
+.catalog-item-hit::before {
+  content: "";
+  display: inline-block;
+  width: 61px;
+  height: 61px;
+  background-image: url("../img/hit.svg");
+  background-repeat: no-repeat;
+}
+
+.shop-info {
+  min-height: 308px;
+  background-image: url("../img/background-waffle.jpg");
+  background-repeat: no-repeat;
+}
+
+.new-in-blog {
+  min-height: 221px;
+  background-image: url("../img/background-strawberry.jpg");
+  background-repeat: no-repeat;
+  background-position: 0px -225px;
+}
+
+.contacts-map {
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+}
+
+.contacts-map::before {
+  content: "";
+  display: inline-block;
+  width: 80px;
+  height: 140px;
+  background-image: url("../img/map-pointer.svg");
+  background-repeat: no-repeat;
+}
+
+
+
+
+/********************  Подвал  ******************/
+
+.main-footer-social {
+  list-style-type: none;
+}
+
+.social-btn {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border: 2.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-decoration: none;
+  background-repeat: no-repeat;
+}
+
+.social-btn-twit {
+  background-image: url("../img/icon-twitter.svg");
+}
+
+.social-btn-twit:hover {
+  background-image: url("../img/icons8.svg"); /* тут не забыть изменить!!!!!!*/
+}
+
+.social-btn-inst {
+  background-image: url("../img/icon-instagram.svg");
+}
+
+.social-btn-fb {
+  background-image: url("../img/icon-facebook.svg");
+}
+
+.social-btn-vk {
+  background-image: url("../img/icon-vk.svg");
+}
+
+.footer-heart::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 13px;
+  background-image: url("../img/icon-heart-footer.svg");
 }
